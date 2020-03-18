@@ -1,0 +1,32 @@
+{
+  "is_enabled" : true,
+  "description" : "",
+  "expanders" : [
+    {
+      "pattern" : "li ${arr:word}",
+      "is_enabled" : true,
+      "output_template" : "var ${arr} = [\"Tom\", \"Andy\", \"Jack\"];\n\/\/var ${arr} = List.of([1,2,3]);\n${arr}.add(\"test\");\n${arr}.forEach((v) => print(v));",
+      "name" : "list",
+      "description" : "",
+      "supported_languages" : [
+        "any"
+      ],
+      "identifier" : ""
+    },
+    {
+      "identifier" : "",
+      "name" : "map",
+      "description" : "",
+      "supported_languages" : [
+        "any"
+      ],
+      "is_enabled" : true,
+      "output_template" : "\/\/ var map1 = {\"name\": \"Tom\", 'sex': 'male'}; \nvar ${foo} = new Map();\n${foo}['name'] = 'Tom';\n${foo}['sex'] = 'male';\n${foo}.forEach((k,v) => print('${k } :  ${v }'));",
+      "pattern" : "ma ${foo:word}"
+    }
+  ],
+  "name" : "Flutter",
+  "supported_languages" : [
+    "any"
+  ]
+}
